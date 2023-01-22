@@ -1,0 +1,10 @@
+.navbar {
+  grid-column: 2 / 6;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 5rem));
+  grid-template-rows: 4rem;
+  place-items: center;
+}
+nav {
+  display: grid;
+}

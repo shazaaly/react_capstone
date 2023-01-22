@@ -1,0 +1,26 @@
+/* .header-container {
+  background-color: red;
+}
+.headerArea {
+  grid-area: header;
+  display: grid !important;
+}
+.headerLogo {
+  grid-column: 1 / 2;
+} */
+.customStyle {
+  width: 50%;
+  height: 100%;
+  background-color: beige;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.modalUl {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  margin: 1rem;
+  padding: 1rem;
+}

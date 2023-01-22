@@ -1,7 +1,10 @@
 import React from 'react'
+import './main.css'
 
 export const Main = () => {
   return (
-    <main>Main</main>
+    <div className='container  main-container '>
+      <main className='main'>Main main main</main>
+    </div>
   )
 }

@@ -1,21 +1,16 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import './nav.css'
 
 export const Nav = () => {
   return (
-    <nav>
-      <ul>
+    <nav >
+      <ul className='navbar'>
         <li>
-          <li>
-            <NavLink
-              to="/" end
-            // style={({ isActive }) =>
-            //   isActive ? activeStyle : undefined
-            // }
-            >
-              Home
-            </NavLink>
-          </li>
+          <NavLink
+            to="/" end>
+            Home
+          </NavLink>
         </li>
         <li>
           <NavLink to="/about" end>
