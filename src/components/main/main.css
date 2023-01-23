@@ -1,6 +1,5 @@
 .main-container{
     display: grid;
-    background-color: green;
 }
 .main{
     grid-area: main;
