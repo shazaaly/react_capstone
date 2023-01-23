@@ -1,0 +1,56 @@
+img.dish {
+  object-fit: contain;
+  width: 100%;
+}
+.specialsContainer {
+  height: 70vh;
+  margin-bottom: 17rem;
+  display: grid;
+  grid-template-columns: repeat(3, calc(80% / 3));
+  grid-template-rows: repeat(2, 5rem);
+  place-content: center;
+  row-gap: 1em;
+}
+
+.cardsWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 80%));
+  grid-template-rows: auto;
+  grid-gap: 3rem;
+}
+
+.heading {
+  grid-column: 1/2;
+}
+.article {
+  background-color: rgba(217, 217, 217, 1);
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+}
+.textZone {
+  padding: 0.8rem;
+}
+.tit_price {
+  display: flex;
+  flex-direction: row;
+  gap: 6.2rem;
+}
+
+.menuBtn {
+  background-color: var(--color-btn-yellow);
+  font-size: 1.563rem;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: 0em;
+  cursor: pointer;
+  height: 66px;
+  width: 278px;
+  border-radius: 10px;
+  grid-column: 3/4;
+}
+span {
+  color: var(--color-btn-yellow);
+}
+p {
+  inline-size: inherit;
+}
