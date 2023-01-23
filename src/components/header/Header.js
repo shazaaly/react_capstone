@@ -6,7 +6,6 @@ import burg from '../../images/burger.png'
 import close from '../../images/close.png'
 import './header.css'
 
-
 // import './header.css'
 const navStyle = {
     display: "grid",
@@ -30,11 +29,6 @@ export const Header = () => {
         setMenuOpen(!menuOpen)
 
     }
-    const customStyle = {
-
-    }
-
-
 
     return (
         <div className='container header-container  '>
