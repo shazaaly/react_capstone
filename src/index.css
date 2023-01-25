@@ -1,5 +1,5 @@
 body {
-  font-family: "Markazi Text", serif;
+  font-family: "Markazi Text";
   color: var(--color-black);
   line-height: 1.7;
   margin: 0 auto;
@@ -13,7 +13,7 @@ body {
 .container {
   max-width: 90%;
   margin: 0 auto;
-  min-height: fit-content;
+  height: fit-content;
   /* min-height: 50vh; */
 }
 h1,

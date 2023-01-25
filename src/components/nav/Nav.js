@@ -2,9 +2,10 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './nav.css'
 
-export const Nav = () => {
+export const Nav = ({headerStyle}) => {
+
   return (
-    <nav >
+    <nav style={headerStyle} >
       <ul className='navbar'>
         <li>
           <NavLink
@@ -12,15 +13,16 @@ export const Nav = () => {
             Home
           </NavLink>
         </li>
+
         <li>
-          <NavLink to="/about" end>
+          <a href="#about" end>
             About
-          </NavLink>
+          </a>
         </li>
         <li>
-          <NavLink to="/menu" end>
+          <a href="/menu" end>
             Menu
-          </NavLink>
+          </a>
         </li>
         <li>
           <NavLink to="/reservations" end>

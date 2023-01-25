@@ -12,8 +12,11 @@ import { BookingPage } from './components/pages/reservations/BookingPage';
 
 
 function App() {
+
   return (
     <>
+
+
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
@@ -22,7 +25,7 @@ function App() {
         <Route path='/booking' element={<BookingPage />} />
         <Route path='/login' element={<Login />} />
       </Routes>
-     
+
 
     </>
   );

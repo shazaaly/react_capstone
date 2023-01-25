@@ -1,6 +1,7 @@
 import React from 'react'
 import { Logo } from '../logo/Logo'
 import './footer.css'
+import {Nav} from '../../components/nav/Nav'
 
 
 export const Footer = () => {
@@ -10,6 +11,7 @@ export const Footer = () => {
         <Logo />
         <aside className='doormatNav'>
           <p>Doormat Navigation</p>
+          <Nav />
         </aside>
 
         <aside className='contacts'>

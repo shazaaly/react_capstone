@@ -7,7 +7,8 @@ import close from '../../images/close.png'
 import './header.css'
 
 // import './header.css'
-const navStyle = {
+const headerStyle = {
+    "background": "red",
     display: "grid",
     gridColumn: "2 / 6",
     gridTemplateColumns: " repeat(6, minmax(40px, auto))",

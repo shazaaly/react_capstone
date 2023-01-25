@@ -4,9 +4,12 @@ img.dish {
 }
 .specialsContainer {
   height: 70vh;
+  width: 70%;
+
   margin-bottom: 17rem;
   display: grid;
-  grid-template-columns: repeat(3, calc(80% / 3));
+  /* grid-template-columns: repeat(3, calc(80% / 3)); */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-template-rows: repeat(2, 5rem);
   place-content: center;
   row-gap: 1em;
@@ -17,6 +20,10 @@ img.dish {
   grid-template-columns: repeat(3, minmax(300px, 80%));
   grid-template-rows: auto;
   grid-gap: 3rem;
+}
+
+.textZone p {
+  inline-size: 290px;
 }
 
 .heading {
@@ -46,11 +53,24 @@ img.dish {
   height: 66px;
   width: 278px;
   border-radius: 10px;
-  grid-column: 3/4;
+  grid-column: 4/5;
 }
 span {
   color: var(--color-btn-yellow);
 }
-p {
+/* p {
   inline-size: inherit;
+} */
+
+@media (max-width: 600px) {
+  /* styles for screens smaller than 600px */
+  .specialsContainer {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
+
+  .article {
+    width: 100%; /* take full width of the container */
+    height: auto; /* use the natural height */
+  }
 }
+
