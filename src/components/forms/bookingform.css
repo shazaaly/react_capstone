@@ -1,0 +1,16 @@
+.form_container {
+  min-width: 33rem;
+  width:100% ;
+  gap: 5rem;
+  padding: 1.2rem;
+  background-color: var(--color-font-light);
+}
+.btn{
+  cursor: pointer;
+  padding: 1rem;
+}
+
+form input{
+  padding: 0.8rem;
+  border-radius: 10%;
+}

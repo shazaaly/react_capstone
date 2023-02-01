@@ -1,0 +1,11 @@
+.book-container img {
+  width: 100%;
+  min-width: 25%;
+  height: auto;
+}
+.book-container {
+  padding: 5rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 35rem));
+}

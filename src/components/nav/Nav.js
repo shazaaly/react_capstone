@@ -15,27 +15,27 @@ export const Nav = ({headerStyle}) => {
         </li>
 
         <li>
-          <a href="#about" end>
+          <a href="#about" >
             About
           </a>
         </li>
         <li>
-          <a href="/menu" end>
+          <a href="/menu" >
             Menu
           </a>
         </li>
         <li>
-          <NavLink to="/reservations" end>
-            Reservations
+          <NavLink to="/booking"  >
+            Book a table
           </NavLink>
         </li>
         <li>
-          <NavLink to="/order-online" end>
+          <NavLink to="/order-online" >
             Order Online
           </NavLink>
         </li>
         <li>
-          <NavLink to="/login" end>
+          <NavLink to="/login" >
             Login
           </NavLink>
         </li>

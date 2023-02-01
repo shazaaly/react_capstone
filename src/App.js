@@ -8,21 +8,21 @@ import { About } from './components/pages/About/About'
 import { Menu } from './components/pages/menu/Menu'
 import { Login } from './components/pages/login/Login'
 import { Order } from './components/pages/orderOnline/Order'
-import { BookingPage } from './components/pages/reservations/BookingPage';
+import { BookingPage } from './components/pages/bookingPage/BookingPage';
 
 
 function App() {
+  
 
   return (
     <>
-
-
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/menu' element={<Menu />} />
         <Route path='/order-online' element={<Order />} />
-        <Route path='/booking' element={<BookingPage />} />
+        <Route path='/booking'
+          element={<BookingPage />} />
         <Route path='/login' element={<Login />} />
       </Routes>
 
