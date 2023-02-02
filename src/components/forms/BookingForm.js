@@ -1,18 +1,35 @@
-import React, { useReducer, useState } from 'react'
+import React, { useEffect, useReducer, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { bookTime, unbookTime } from '../../redux/BookSlice'
+import { useNavigate } from 'react-router-dom'
+import { updateTimes, unbookTime } from '../../redux/BookSlice'
 
 import './bookingform.css'
 
 export const BookingForm = () => {
+    const navigate = useNavigate();
 
-    const { availableTimes, bookedTimes } = useSelector(state => state.booking)
+    const { availableTimes } = useSelector((state) => state.booking)
+
+   
+    const initializeTimes = (data) => {
+
+
+    }
+    useEffect(() => {
+        initializeTimes()
+
+    }, []);
+
+
+
+
     // console.log(bookedTimes);
     const [selectedTime, setSelectedTime] = useState('');
     const timeDispatch = useDispatch()
 
     const initialFormState = {
-        date: Date().now,
+        date: Date.now(),
+
         time: '',
         guestsnum: 1,
         occasion: 'birthday',
@@ -33,6 +50,7 @@ export const BookingForm = () => {
 
     }
     const [formState, dispatch] = useReducer(formReducer, initialFormState)
+
     const handleInputChange = (e) => {
         dispatch({
             type: 'INPUT_CHANGE',
@@ -47,22 +65,30 @@ export const BookingForm = () => {
         // console.log(selectedTime);
 
         e.preventDefault();
-        timeDispatch(bookTime(selectedTime))
+        timeDispatch(updateTimes(selectedTime))
         setSelectedTime('')
         dispatch({ type: 'SUBMIT' })
+        navigate("/booking-confirmation");
+
+
+        // alert(`${selectedTime} booked for you, Awesome!`)
     }
 
 
     return (
         <div aria-describedby="form to book a table" className='form_container container'>
-
+            <h1>Book Now </h1>
             <form onSubmit={bookingHandler} style={{ "display": "grid", "maxWidth": "200px", "gap": "20px" }}>
                 <label htmlFor="res-date" />Choose date
                 <input name='date' value={formState.date} type="date" id="res-date" onChange={(e) => { handleInputChange(e) }} />
                 <label htmlFor="res-time" />Choose time
                 <select id="res-time " name='time' value={selectedTime} onChange={(e) => { setSelectedTime(e.target.value) }}>
+                    <option value={null}>Choose time</option>
                     {
+
+
                         availableTimes?.map(time => <option key={time} value={time}>{time}</option>)
+
                     }
 
                 </select>
